@@ -9,7 +9,10 @@ except:
 
 from django import forms
 from django.db.models.fields import BLANK_CHOICE_DASH
-from django.forms.widgets import flatatt
+try:
+    from django.forms.widgets import flatatt
+except ImportError:
+    from django.forms import flatatt
 try:
     from django.utils.encoding import force_text
 except:  # pragma: nocover
