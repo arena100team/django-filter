@@ -12,7 +12,7 @@ from django.db.models.fields import BLANK_CHOICE_DASH
 try:
     from django.forms.widgets import flatatt
 except ImportError:
-    from django.forms import flatatt
+    from django.forms.utils import flatatt
 try:
     from django.utils.encoding import force_text
 except:  # pragma: nocover
